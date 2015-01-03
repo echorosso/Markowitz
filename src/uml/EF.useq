@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence-diagram version="1.1.7" icons="true">  
+  <object id="1" language="java" name="springapp.web.FetchAssetFormController" project="Markowitz" 
+    file="/Markowitz/src/springapp/web/FetchAssetFormController.java" binary="false" label="fetchAssetFormController" 
+    type="class" autoSize="true">    
+    <position height="-1" width="-1" x="227" y="0"/>    
+    <execution id="2">      
+      <position height="923" width="0" x="0" y="102"/>    
+    </execution>    
+    <execution id="4">      
+      <position height="860" width="0" x="0" y="144"/>    
+    </execution>  
+  </object>  
+  <object id="13" language="java" name="springapp.service.AssetSelector" project="Markowitz" 
+    file="/Markowitz/src/springapp/service/AssetSelector.java" binary="false" label="assets" type="class" 
+    autoSize="true">    
+    <position height="0" width="0" x="0" y="0"/>    
+    <execution id="6">      
+      <position height="21" width="0" x="0" y="175"/>    
+    </execution>  
+  </object>  
+  <object id="14" language="java" name="springapp.service.AssetManager" project="Markowitz" 
+    file="/Markowitz/src/springapp/service/AssetManager.java" binary="false" label="assetManager" type="interface" 
+    autoSize="true">    
+    <position height="-1" width="-1" x="356" y="0"/>    
+    <execution id="8">      
+      <position height="358" width="0" x="0" y="220"/>    
+    </execution>    
+    <execution id="10">      
+      <position height="346" width="0" x="0" y="628"/>    
+    </execution>  
+  </object>  
+  <object id="19" language="java" name="springapp.service.SimpleAssetManager" project="Markowitz" 
+    file="/Markowitz/src/springapp/service/SimpleAssetManager.java" binary="false" label="simpleAssetManager" 
+    type="class" autoSize="true">    
+    <position height="-1" width="-1" x="667" y="0"/>    
+    <execution id="16">      
+      <position height="316" width="145" x="399" y="241"/>    
+    </execution>    
+    <execution id="18">      
+      <position height="304" width="145" x="399" y="649"/>    
+    </execution>  
+  </object>  
+  <object id="26" language="java" name="springapp.repository.AssetDao" project="Markowitz" 
+    file="/Markowitz/src/springapp/repository/AssetDao.java" binary="false" label="assetDao" type="interface" 
+    autoSize="true">    
+    <position height="0" width="0" x="0" y="0"/>    
+    <execution id="21">      
+      <position height="148" width="0" x="0" y="388"/>    
+    </execution>    
+    <execution id="23">      
+      <position height="210" width="0" x="0" y="670"/>    
+    </execution>  
+  </object>  
+  <object id="33" language="java" name="springapp.repository.YahooAssetDao" project="Markowitz" 
+    file="/Markowitz/src/springapp/repository/YahooAssetDao.java" binary="false" label="yahooAssetDao" type="class" 
+    autoSize="true">    
+    <position height="-1" width="-1" x="700" y="0"/>    
+    <execution id="28">      
+      <position height="106" width="112" x="644" y="409"/>    
+    </execution>    
+    <execution id="35">      
+      <position height="21" width="0" x="0" y="473"/>    
+    </execution>  
+  </object>  
+  <object id="36" language="java" name="springapp.repository.CurrencyConverter" project="Markowitz" 
+    file="/Markowitz/src/springapp/repository/CurrencyConverter.java" binary="false" label="currencyConverter" 
+    type="class" autoSize="true">    
+    <position height="-1" width="-1" x="723" y="0"/>    
+    <execution id="30">      
+      <position height="71" width="131" x="760" y="691"/>    
+    </execution>    
+    <execution id="38">      
+      <position height="21" width="131" x="760" y="720"/>    
+    </execution>    
+    <execution id="32">      
+      <position height="84" width="131" x="760" y="775"/>    
+    </execution>    
+    <execution id="40">      
+      <position height="21" width="131" x="760" y="817"/>    
+    </execution>  
+  </object>  
+  <object id="41" language="java" name="springapp.repository.PortfolioOptimizer" project="Markowitz" 
+    file="/Markowitz/src/springapp/repository/PortfolioOptimizer.java" binary="false" label="portfolioOptimizer" 
+    type="class" autoSize="true">    
+    <position height="0" width="0" x="0" y="0"/>    
+    <execution id="25">      
+      <position height="21" width="0" x="0" y="911"/>    
+    </execution>  
+  </object>  
+  <object id="42" language="java" name="springapp.chart.ScatterPlotDataProducer" project="Markowitz" 
+    file="/Markowitz/src/springapp/chart/ScatterPlotDataProducer.java" binary="false" label="graph" type="class" 
+    autoSize="true">    
+    <position height="0" width="0" x="0" y="0"/>    
+    <execution id="12">      
+      <position height="21" width="0" x="0" y="962"/>    
+    </execution>  
+  </object>  
+  <message id="3" 
+    operation="calculateMarkowtitzEF(springapp.service.AssetSelector,javax.servlet.http.HttpServletRequest):org.springframework.web.servlet.ModelAndView" 
+    x="98" y="105">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="4"/>  
+  </message>  
+  <message id="5" operation="getSymbol():java.lang.String">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="6"/>  
+  </message>  
+  <message id="7" operation="getAssets(java.lang.String):java.util.List&lt;Asset&gt;">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="8"/>  
+  </message>  
+  <message id="9" 
+    operation="calculateAssetParameters(java.util.List&lt;springapp.domain.Asset&gt;):java.util.Map&lt;String,List&lt;?&gt;&gt;">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="10"/>  
+  </message>  
+  <message id="11" operation="ScatterPlotDataProducer(java.util.Map&lt;java.lang.String,java.util.List&lt;?&gt;&gt;)">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="12"/>  
+  </message>  
+  <message id="15" operation="getAssets(java.lang.String):java.util.List&lt;Asset&gt;">    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="16"/>  
+  </message>  
+  <message id="17" 
+    operation="calculateAssetParameters(java.util.List&lt;springapp.domain.Asset&gt;):java.util.Map&lt;String,List&lt;?&gt;&gt;">    
+    <end type="SOURCE" refId="10"/>    
+    <end type="TARGET" refId="18"/>  
+  </message>  
+  <message id="20" 
+    operation="getAssets(java.lang.String,java.util.Calendar,java.util.Calendar):java.util.List&lt;Asset&gt;">    
+    <end type="SOURCE" refId="16"/>    
+    <end type="TARGET" refId="21"/>  
+  </message>  
+  <message id="22" 
+    operation="calculateAssetParameters(java.util.List&lt;springapp.domain.Asset&gt;):java.util.Map&lt;String,List&lt;?&gt;&gt;">    
+    <end type="SOURCE" refId="18"/>    
+    <end type="TARGET" refId="23"/>  
+  </message>  
+  <message id="24" 
+    operation="optimizePortfolio(springapp.domain.Portfolio,java.util.List&lt;springapp.domain.AssetParameters&gt;):java.util.List&lt;Portfolio&gt;">    
+    <end type="SOURCE" refId="18"/>    
+    <end type="TARGET" refId="25"/>  
+  </message>  
+  <message id="27" 
+    operation="getAssets(java.lang.String,java.util.Calendar,java.util.Calendar):java.util.List&lt;Asset&gt;">    
+    <end type="SOURCE" refId="21"/>    
+    <end type="TARGET" refId="28"/>  
+  </message>  
+  <message id="29" 
+    operation="checkAssetsCurrency(java.util.Map&lt;java.lang.String,java.util.List&lt;springapp.domain.Asset&gt;&gt;):boolean">    
+    <end type="SOURCE" refId="23"/>    
+    <end type="TARGET" refId="30"/>  
+  </message>  
+  <message id="31" 
+    operation="convertToUniformCurrency(java.util.Map&lt;java.lang.String,java.util.List&lt;springapp.domain.Asset&gt;&gt;):java.util.Map&lt;String,List&lt;Asset&gt;&gt;">    
+    <end type="SOURCE" refId="23"/>    
+    <end type="TARGET" refId="32"/>  
+  </message>  
+  <message id="34" 
+    operation="calculateReturns(java.util.List&lt;springapp.domain.Asset&gt;):java.util.List&lt;Asset&gt;">    
+    <end type="SOURCE" refId="28"/>    
+    <end type="TARGET" refId="35"/>  
+  </message>  
+  <message id="37">    
+    <end type="SOURCE" refId="30"/>    
+    <end type="TARGET" refId="38"/>  
+  </message>  
+  <message id="39">    
+    <end type="SOURCE" refId="32"/>    
+    <end type="TARGET" refId="40"/>  
+  </message>
+</sequence-diagram>

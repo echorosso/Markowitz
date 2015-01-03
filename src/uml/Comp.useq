@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence-diagram version="1.1.7" icons="true">  
+  <object id="1" language="java" name="springapp.web.FetchAssetFormController" project="Markowitz" 
+    file="/Markowitz/src/springapp/web/FetchAssetFormController.java" binary="false" label="fetchAssetFormController" 
+    type="class" autoSize="true">    
+    <position height="-1" width="-1" x="406" y="0"/>    
+    <execution id="2">      
+      <position height="357" width="172" x="5" y="87"/>    
+    </execution>    
+    <execution id="4">      
+      <position height="294" width="172" x="5" y="129"/>    
+    </execution>  
+  </object>  
+  <object id="7" language="java" name="springapp.service.ComponentManager" project="Markowitz" 
+    file="/Markowitz/src/springapp/service/ComponentManager.java" binary="false" label="componentManager" 
+    type="interface" autoSize="true">    
+    <position height="-1" width="-1" x="410" y="0"/>    
+    <execution id="6">      
+      <position height="252" width="138" x="181" y="150"/>    
+    </execution>  
+  </object>  
+  <object id="10" language="java" name="springapp.service.YahooComponentManager" project="Markowitz" 
+    file="/Markowitz/src/springapp/service/YahooComponentManager.java" binary="false" label="yahooComponentManager" 
+    type="class" autoSize="true">    
+    <position height="-1" width="-1" x="474" y="0"/>    
+    <execution id="9">      
+      <position height="210" width="172" x="323" y="171"/>    
+    </execution>  
+  </object>  
+  <object id="13" language="java" name="springapp.repository.ComponentDao" project="Markowitz" 
+    file="/Markowitz/src/springapp/repository/ComponentDao.java" binary="false" label="componentDao" type="interface" 
+    autoSize="true">    
+    <position height="-1" width="-1" x="597" y="0"/>    
+    <execution id="12">      
+      <position height="168" width="110" x="499" y="192"/>    
+    </execution>  
+  </object>  
+  <object id="16" language="java" name="springapp.repository.YahooComponentDao" project="Markowitz" 
+    file="/Markowitz/src/springapp/repository/YahooComponentDao.java" binary="false" label="yahooComponentDao" 
+    type="class" autoSize="true">    
+    <position height="-1" width="-1" x="852" y="0"/>    
+    <execution id="15">      
+      <position height="126" width="144" x="613" y="213"/>    
+    </execution>    
+    <execution id="18">      
+      <position height="21" width="0" x="0" y="297"/>    
+    </execution>  
+  </object>  
+  <message id="3" operation="processFetchIndexes(springapp.service.IndexSelector,java.io.OutputStream):void">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="4"/>  
+  </message>  
+  <message id="5" operation="getComponents(java.lang.String):java.util.List&lt;MarketComponent&gt;">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="6"/>  
+  </message>  
+  <message id="8" operation="getComponents(java.lang.String):java.util.List&lt;MarketComponent&gt;">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="9"/>  
+  </message>  
+  <message id="11" operation="getIndexComponent(java.lang.String):java.util.List&lt;MarketComponent&gt;">    
+    <end type="SOURCE" refId="9"/>    
+    <end type="TARGET" refId="12"/>  
+  </message>  
+  <message id="14" operation="getIndexComponent(java.lang.String):java.util.List&lt;MarketComponent&gt;">    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="15"/>  
+  </message>  
+  <message id="17" operation="getSimpleJdbcTemplate():org.springframework.jdbc.core.simple.SimpleJdbcTemplate">    
+    <end type="SOURCE" refId="15"/>    
+    <end type="TARGET" refId="18"/>  
+  </message>
+</sequence-diagram>
